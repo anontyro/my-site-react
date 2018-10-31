@@ -4,20 +4,18 @@ import { connect } from 'react-redux';
 import * as actionList from '../actions/actions';
 
 class HomeView extends Component {
+  componentDidMount() {
 
-    componentDidMount() {
+  }
 
-    }
-
-    render() {
-        return (
-            <div className="home-main">
-                <h1>HomePage</h1>
-            </div>
-        );
-    }
-
-};
+  render() {
+    return (
+      <div className="home-main">
+        <h1>HomePage</h1>
+      </div>
+    );
+  }
+}
 
 const mapStateToProps = state => ({
 
