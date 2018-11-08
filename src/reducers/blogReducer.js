@@ -6,9 +6,10 @@ const initialState = {
 
 export default (state = initialState, action) => {
   if (action.type === actionTypes.GET_BLOG_LIST) {
+    console.log('fired');
     return {
       ...state,
-      blogList: state.blogList,
+      blogList: action.value.blogList,
     };
   }
 

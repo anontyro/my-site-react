@@ -12,9 +12,6 @@ class HomeView extends Component {
     return (
       <div className="home-main">
         <h1>HomePage</h1>
-        <p>
-          {this.props.blog}
-        </p>
       </div>
     );
   }
