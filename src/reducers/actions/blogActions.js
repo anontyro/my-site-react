@@ -1,19 +1,21 @@
-import React from 'react';
 import * as actions from '../../data/consts/blogAction';
 import BaseApiHandler from '../../services/Api/BaseApiHandler';
 
-const getBlogList = (list) => {
+// eslint-disable-arrow-body-style
+// eslint-disable-next-line
+export const getBlogList = (list) => {
   return {
     type: actions.GET_BLOG_LIST,
     value: list,
-  }
+  };
 };
 
-export const fetchBlogList = () => {
+export const fetchBlogList = async () => {
   const apiHandler = new BaseApiHandler();
 
   try {
-    const response = apiHandler.getBlogList();
+    const response = await apiHandler.getBlogList();
+    console.log(response);
     return dispatch => dispatch(getBlogList(response));
   } catch (err) {
     return console.error(err);
