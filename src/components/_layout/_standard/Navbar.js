@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from '../../../../node_modules/react-router-dom';
 import styled from '../../../../node_modules/styled-components';
+import { COLOURS } from '../../../data/defaultColours';
 
 const NavContainer = styled.div`
   display: flex;
@@ -11,7 +12,7 @@ const Signature = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Pacifico');
   font-size: 30px;
   float: left;
-  color: #4196ea !important;
+  color: ${COLOURS.HEADING_COLOUR} !important;
   font-family: 'Pacifico', cursive;
 `;
 
@@ -19,12 +20,15 @@ const LinkList = styled.ul`
   list-style: none;
   display: flex;
   justify-content: space-between;
-  width: 300px;
+  width: 450px;
+  line-height: 1.4;
 `;
 
 const LinkItem = styled(Link)`
   text-decoration: none;
-  &:hover {color: red}
+  color: ${COLOURS.DEFAULT_TEXT_COLOUR};
+  font-size: 22px;
+  &:hover {color: ${COLOURS.HEADING_COLOUR}};
 
 `
 
