@@ -25,7 +25,7 @@ class BaseApiHandler {
 
   getBlogList = async () => {
     try {
-      const response = await this.genericFetchGet(GlobalVars.blogRoutes.getPublishedList);
+      const response = await this.genericFetchGet(GlobalVars.baseRoutes.develop + GlobalVars.blogRoutes.getPublishedList);
       return response;
     } catch (err) {
       return console.error(err);

@@ -38,9 +38,9 @@ const Navbar = () => (
     <LinkList>
       <li><LinkItem to='/'>Home</LinkItem></li>
       <li><LinkItem to='/blog'>Blog</LinkItem></li>
-      <li><LinkItem to='/'>Portfolio</LinkItem></li>
-      <li><LinkItem to='/'>Resume</LinkItem></li>
-      <li><LinkItem to='/'>About</LinkItem></li>
+      <li><LinkItem to='/portfolio'>Portfolio</LinkItem></li>
+      <li><LinkItem to='/resume'>Resume</LinkItem></li>
+      <li><LinkItem to='/about'>About</LinkItem></li>
     </LinkList>
   </NavContainer>);
 
