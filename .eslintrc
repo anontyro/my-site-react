@@ -1,5 +1,5 @@
 {
-    "extends": "airbnb",
+    "extends": ["airbnb", "prettier"],
     "parser": "babel-eslint",
     "env": {
         "node": true,
@@ -8,6 +8,7 @@
         },
         "rules": {
             "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-            "import/prefer-default-export": "off"
+            "import/prefer-default-export": "off",
+            "singleQuote": true
          }
 }
