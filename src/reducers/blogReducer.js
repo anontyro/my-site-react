@@ -1,4 +1,4 @@
-import * as actionTypes from '../actions/actions';
+import * as actionTypes from '../data/consts/blogAction';
 
 const initialState = {
   blogList: [],
@@ -6,7 +6,6 @@ const initialState = {
 
 export default (state = initialState, action) => {
   if (action.type === actionTypes.GET_BLOG_LIST) {
-    console.log('fired');
     return {
       ...state,
       blogList: action.value.blogList,

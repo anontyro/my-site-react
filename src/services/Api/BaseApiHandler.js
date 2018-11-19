@@ -25,12 +25,26 @@ class BaseApiHandler {
 
   getBlogList = async () => {
     try {
-      const response = await this.genericFetchGet(GlobalVars.baseRoutes.develop + GlobalVars.blogRoutes.getPublishedList);
+      const response = await this.genericFetchGet(
+        GlobalVars.baseRoutes.develop + GlobalVars.blogRoutes.getPublishedList,
+      );
       return response;
     } catch (err) {
       return console.error(err);
     }
   }
+
+  getCurrentResume = async () => {
+    try {
+      const response = await this.genericFetchGet(
+        GlobalVars.blogRoutes.develop + GlobalVars.resumeRoutes.getCurrentResume,
+      );
+      return response;
+    } catch (err) {
+      return console.error(err);
+    }
+  }
+
 }
 
 export default BaseApiHandler;

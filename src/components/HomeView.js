@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import PropTypes from 'prop-types';
 import * as blogActions from '../reducers/actions/blogActions';
 
 function BlogItem(blog) {
@@ -14,26 +14,37 @@ function BlogItem(blog) {
 
 class HomeView extends Component {
   componentDidMount() {
-    this.props.getBlogList();
+    const { getBlogList } = this.props;
+    getBlogList();
   }
 
   blogList() {
+    const { blog } = this.props;
+
     const list = [];
-    for (let i = 0; i < this.props.blog.length; i += 1) {
-      list.push(<BlogItem key={this.props.blog[i]._id} blog={this.props.blog[i]} />);
+    for (let i = 0; i < blog.length; i += 1) {
+      /* eslint-disable no-underscore-dangle */
+      list.push(<BlogItem key={blog[i]._id} blog={blog[i]} />);
     }
     return list;
   }
 
   render() {
+    const { blog } = this.props;
+
     return (
       <div className="home-main">
         <h1>HomePage</h1>
-        {this.blogList()}
+        {blog && this.blogList()}
       </div>
     );
   }
 }
+
+HomeView.propTypes = {
+  getBlogList: PropTypes.func.isRequired,
+  blog: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
+};
 
 const mapStateToProps = state => ({
   blog: state.blog.blogList,

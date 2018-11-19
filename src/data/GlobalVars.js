@@ -2,12 +2,12 @@ const GlobalVars = {
   apiRoot: 'https://rfl5jsmj0m.execute-api.ap-southeast-1.amazonaws.com/',
   baseRoutes: {
     develop: 'dev/',
-    production: 'prod/'
+    production: 'prod/',
   },
   authRoutes: {
     login: 'login',
     userUpdate: 'user',
-    updatePassword: 'updatepassword'
+    updatePassword: 'updatepassword',
   },
   blogRoutes: {
     getPublishedList: 'blog',
@@ -15,7 +15,7 @@ const GlobalVars = {
     getBlogBySlug: 'blog/find/',
     createBlog: 'blog',
     updateBlog: 'blog',
-    deleteBlog: 'blog/'
+    deleteBlog: 'blog/',
   },
   resumeRoutes: {
     getCurrentResume: 'resume',
@@ -23,8 +23,8 @@ const GlobalVars = {
     createResume: 'resume',
     updateResume: 'resume',
     patchSelectedResumse: 'resume',
-    deleteResume: 'resume/'
-  }
+    deleteResume: 'resume/',
+  },
 };
 
 export default GlobalVars;

@@ -1,0 +1,2 @@
+export const GET_RESUME_LIST = 'GET_RESUME_LIST';
+export const GET_RESUME_DETAILS = 'GET_RESUME_DETAILS';
