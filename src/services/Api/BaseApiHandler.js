@@ -14,7 +14,6 @@ class BaseApiHandler {
 
   genericFetchGet = async (endpoint) => {
     const uri = GlobalVars.apiRoot + endpoint;
-
     try {
       const response = await fetch(uri, this.baseHeader());
       return response.json();
@@ -37,7 +36,7 @@ class BaseApiHandler {
   getCurrentResume = async () => {
     try {
       const response = await this.genericFetchGet(
-        GlobalVars.blogRoutes.develop + GlobalVars.resumeRoutes.getCurrentResume,
+        GlobalVars.baseRoutes.develop + GlobalVars.resumeRoutes.getCurrentResume,
       );
       return response;
     } catch (err) {
